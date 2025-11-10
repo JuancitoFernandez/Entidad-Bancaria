@@ -186,3 +186,5 @@ Todos los eventos siguen el formato `EventEnvelope<T>` definido en `@banking-eve
 
 
 
+
+
