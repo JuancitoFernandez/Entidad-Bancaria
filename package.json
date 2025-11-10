@@ -1,0 +1,25 @@
+{
+  "name": "banking-events-system",
+  "version": "1.0.0",
+  "description": "Sistema de simulación de transacciones bancarias con microservicios y Kafka",
+  "private": true,
+  "scripts": {
+    "dev": "pnpm --parallel --filter \"./apps/*\" dev",
+    "build": "pnpm --filter \"@banking-events-system/event-contracts\" build && pnpm --recursive --filter \"./apps/*\" build",
+    "build:contracts": "pnpm --filter \"@banking-events-system/event-contracts\" build",
+    "install:all": "pnpm install",
+    "docker:up": "docker-compose up -d",
+    "docker:down": "docker-compose down",
+    "docker:logs": "docker-compose logs -f",
+    "docker:restart": "docker-compose restart"
+  },
+  "devDependencies": {
+    "typescript": "^5.3.3",
+    "@types/node": "^20.10.6"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "pnpm": ">=8.0.0"
+  }
+}
+
